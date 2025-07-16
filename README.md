@@ -1,5 +1,8 @@
 Openshift Local
 
+crc setup
+crc start
+
 The server is accessible via web console at:
   https://console-openshift-console.apps-crc.testing
 
