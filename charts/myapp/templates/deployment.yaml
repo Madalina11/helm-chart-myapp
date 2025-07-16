@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "myapp.fullname" . }}
+  name: {{ .Release.Name }}
   namespace: myproject
   labels:
-    app: {{ include "myapp.name" . }}
+    app: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "myapp.name" . }}
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ include "myapp.name" . }}
+        app: {{ .Release.Name }}
     spec:
       containers:
         - name: myapp
@@ -23,7 +23,7 @@ spec:
             - containerPort: {{ .Values.service.port }}
           envFrom:
             - configMapRef:
-                name: {{ include "myapp.fullname" . }}
+                name: {{ .Release.Name }}
           livenessProbe:
             httpGet:
               scheme: HTTPS

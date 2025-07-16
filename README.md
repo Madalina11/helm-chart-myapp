@@ -1,7 +1,7 @@
-Openshift Local
+### Openshift Local ###
 
-crc setup
-crc start
+$ crc setup
+$ crc start
 
 The server is accessible via web console at:
   https://console-openshift-console.apps-crc.testing
@@ -19,3 +19,11 @@ Use the 'oc' command line interface:
   $ oc login -u developer https://api.crc.testing:6443
   $ oc login -u kubeadmin -p PE9Na-FNZ66-8VCk6-UdbbQ https://api.crc.testing:6443
   
+ ### Docker ###
+
+$ docker login
+
+https://hub.docker.com/r/madalinna/myapp/tags
+
+$ docker build -t madalinna/myapp:latest .
+$ docker push madalinna/myapp:latest
