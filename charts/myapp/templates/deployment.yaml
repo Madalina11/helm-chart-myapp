@@ -26,14 +26,14 @@ spec:
                 name: {{ .Release.Name }}
           livenessProbe:
             httpGet:
-              scheme: HTTPS
+              scheme: HTTP
               path: {{ .Values.livenessProbe.path }}
               port: {{ .Values.livenessProbe.port }}
             initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
           readinessProbe:
             httpGet:
-              scheme: HTTPS
+              scheme: HTTP
               path: {{ .Values.readinessProbe.path }}
               port: {{ .Values.readinessProbe.port }}
             initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
