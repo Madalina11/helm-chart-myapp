@@ -9,17 +9,5 @@ service:
   type: ClusterIP
   port: 8080
 
-livenessProbe:
-  path: /probes/health
-  port: 8080
-  initialDelaySeconds: 30
-  periodSeconds: 10
-
-readinessProbe:
-  path: /probes/health
-  port: 8080
-  initialDelaySeconds: 5
-  periodSeconds: 5
-
 config:
   MYAPP_SETTING: "some-default-value"
