@@ -27,3 +27,8 @@ https://hub.docker.com/r/madalinna/myapp/tags
 
 $ docker build -t madalinna/myapp:latest .
 $ docker push madalinna/myapp:latest
+
+### Creare Route pentru acces aplicație ###
+
+$ oc expose svc myapp -n myproject
+$ oc get route -n myproject
