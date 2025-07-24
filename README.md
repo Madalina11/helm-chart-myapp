@@ -146,3 +146,7 @@ You have access to 66 projects, the list has been suppressed. You can list all p
 
 Using project "default".
 Welcome! See 'oc help' to get started.
+
+### Important NOTE ###
+
+Before running the TeamCity job, make sure the Openshift API Token hasn't expired. If so, make sure to replace it with the latest one in the 1. Openshift Login and 6. Helm Upgrade Build steps.
